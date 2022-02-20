@@ -6,13 +6,48 @@ body  {
 }
 
 .caption {
-  width: 80%;
-  margin: auto;
+  position: relative;
   overflow: hidden;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
-  width: 80%;
+  display: block;
+  width: 1000px;
+  min-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.text {
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 950px;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: ghostwhite;
+  transform: translateY(100%);
+  transition: transform .35s ease-out;
+}
+
+.caption:hover .text {
+  transform: translateY(0);
+}
+
+.caption-title {
+  text-align: left;
+  margin: 0;
+  padding: 0 0 10px;
+  transform: translateY(calc(-100% - 20px));
+  transition: transform .35s ease-out;
 }
 
 button {
@@ -20,8 +55,13 @@ button {
   margin: .2em;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5em;
+  transition: 1.5s;
+  background-color: ghostwhite;
+  position: relative;
 }
 
 button:hover {
   background-color: cornflowerblue;
+  color: ghostwhite;
 }
+
